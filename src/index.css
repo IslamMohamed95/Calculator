@@ -58,7 +58,13 @@
 }
 
 @media (min-width: 1440px) {
-  .mainCont {
-    height: 480px !important;
+  .ops button {
+    font-size: 22px !important;
+  }
+  .digits button {
+    font-size: 22px !important;
+  }
+  .Calc {
+    width: 35% !important;
   }
 } ;
