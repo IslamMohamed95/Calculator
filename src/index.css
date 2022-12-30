@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media (min-width: 320px) {
+  .mainCont {
+    flex-direction: column-reverse;
+  }
+  .Calc {
+    width: 90% !important;
+  }
+
+  .history {
+    border-top-right-radius: 10px !important;
+    border-top-left-radius: 10px !important;
+    border-bottom-right-radius: unset !important;
+  }
+
+  .ops button {
+    padding: 3% !important;
+    font-size: 16px !important;
+    border: 0.2px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .digits button {
+    font-size: 20px !important;
+    padding: 7% !important;
+  }
+
+  .activeHistory {
+    overflow-y: scroll !important;
+  }
+
+  .result > div {
+    margin-bottom: 1%;
+  }
+}
+
+@media (min-width: 768px) {
+  .mainCont {
+    flex-direction: row;
+  }
+  .Calc {
+    width: 50% !important;
+    border-radius: 10px;
+  }
+
+  .history {
+    border-top-right-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+    border-top-left-radius: unset !important;
+  }
+  .activeHistory {
+    overflow: hidden !important;
+  }
+}
+
+@media (min-width: 1440px) {
+  .mainCont {
+    height: 480px !important;
+  }
+} ;

@@ -1,0 +1,190 @@
+.mainCont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+}
+
+.Calc {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+
+  width: 35%;
+  border: 10px;
+  overflow: hidden;
+
+  background-color: rgba(0, 0, 0, 0.88);
+}
+
+.deactiveBorderCalc {
+  border-top-right-radius: unset;
+  border-bottom-right-radius: unset;
+}
+
+.history {
+  overflow: hidden;
+  border: unset;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 15px;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: all 0.5s ease-in-out !important;
+}
+
+.display {
+  text-align: right;
+  padding: 5% 6%;
+  color: white;
+  font-size: 25px;
+  width: 100%;
+}
+
+.display span {
+  font-size: 15px;
+  color: rgb(133, 133, 133);
+}
+
+.ops {
+  display: flex;
+  width: 100%;
+  background-color: black;
+}
+.ops button {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: white;
+  font-size: 25px;
+  padding: 2%;
+}
+
+button {
+  border: none;
+  flex: auto;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.content {
+  display: flex;
+  height: 100%;
+}
+.content .ops {
+  width: 15%;
+  flex-direction: column;
+}
+
+.content .ops button {
+  background-color: rgba(235, 70, 70, 0.6);
+  font-size: 22px;
+}
+
+.clear {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.clear button {
+  flex: auto;
+  font-size: 22px;
+  color: white;
+  padding: 3%;
+}
+
+.digits {
+  display: flex;
+  flex-wrap: wrap;
+  width: 85%;
+}
+
+.digits button {
+  flex: 1 1 30%;
+  padding: 5% 3%;
+  color: white;
+  font-size: 22px;
+  background-color: transparent;
+}
+
+.result {
+  padding: 5% 0 2% 4%;
+}
+
+/* .result > div {
+  margin-bottom: 4%;
+} */
+
+.result p:first-child {
+  font-size: 15px;
+}
+.result p:last-child {
+  font-size: 13px;
+  color: rgb(87, 87, 87);
+}
+
+#cont {
+  position: relative;
+}
+#cont i {
+  color: rgb(179, 179, 179);
+  position: absolute;
+  top: 15%;
+  right: 15%;
+
+  transition: all 0.5s ease-in-out;
+}
+
+#cont i:hover {
+  cursor: pointer;
+  color: black;
+}
+
+.inp {
+  position: relative;
+  width: 0;
+  overflow: hidden;
+
+  transition: all 0.5s ease-in-out;
+}
+
+.activeInp {
+  animation: anime1 0.5s ease-in-out forwards;
+}
+
+@keyframes anime1 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60%;
+  }
+}
+
+.inp input {
+  width: 100%;
+  padding: 1.5%;
+  border: none;
+  border-radius: 5px;
+}
+
+.inp .fa-circle-check {
+  position: absolute;
+  top: 15% !important;
+  left: 87%;
+
+  color: rgba(196, 42, 42, 0.5) !important;
+
+  transition: all 0.5s ease-in-out;
+}
+
+.hideI {
+  opacity: 0 !important;
+}
+
+.inp .fa-circle-check:hover {
+  cursor: pointer;
+  color: rgb(196, 42, 42) !important;
+}
