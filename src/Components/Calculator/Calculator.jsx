@@ -131,7 +131,6 @@ function Calculator() {
 
   const handleChange = (e, i) => {
     const { name, value } = e.target;
-
     inpValue[i][name] = value;
     setInpValue([...inpValue]);
   };
@@ -167,7 +166,11 @@ function Calculator() {
       if (ref1.current.classList.contains("activeHistory")) {
         if (window.innerWidth >= 768) {
           ref1.current.style.height = ref2.current.offsetHeight + "px";
-          ref1.current.style.width = "30%";
+          if (window.innerWidth < 1440) {
+            ref1.current.style.width = "30%";
+          } else {
+            ref1.current.style.width = "20%";
+          }
         } else {
           ref1.current.style.width = "90%";
           ref1.current.style.height = "80px";
@@ -185,7 +188,11 @@ function Calculator() {
       if (ref1.current.classList.contains("activeHistory")) {
         if (window.innerWidth >= 768) {
           ref1.current.style.height = ref2.current.offsetHeight + "px";
-          ref1.current.style.width = "30%";
+          if (window.innerWidth < 1440) {
+            ref1.current.style.width = "30%";
+          } else {
+            ref1.current.style.width = "20%";
+          }
         } else {
           ref1.current.style.width = "90%";
           ref1.current.style.height = "80px";
